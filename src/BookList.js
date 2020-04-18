@@ -1,9 +1,8 @@
 import React from 'react';
 import BookCard from './BookCard';
 
-
-const Books = (props) => (
-  <div className="book-list-container">
+const BookList = (props) => (
+  <div className="list">
     {
         props.books.map((books, i) => (
           <BookCard
@@ -18,4 +17,4 @@ const Books = (props) => (
   </div>
 );
 
-export default Books;
+export default BookList;
