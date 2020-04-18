@@ -1,0 +1,8 @@
+# Dependency directories
+node_modules/
+
+# Dependency file versions
+package-lock.json
+
+# Distribution directories
+dist/
