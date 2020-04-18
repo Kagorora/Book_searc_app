@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "dev": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "serve -s ./build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -46,6 +48,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1",
     "sass-loader": "^8.0.2",
+    "serve": "^11.3.0",
     "superagent": "^5.2.2"
   }
 }
