@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import BookList from './BookList';
-import Footer from './Footer';
-import './App.css';
 import request from 'superagent';
+import Header from '../components/Header';
+import BookList from '../components/BookList';
+import Footer from '../components/Footer';
+import '../assets/styles/App.css';
 
 class App extends Component {
   constructor(props) {
