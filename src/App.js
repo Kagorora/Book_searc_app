@@ -1,43 +1,18 @@
-import React, { Component } from 'react';
-import Header from './Header';
-import BookList from './BookList';
-import Footer from './Footer';
-import './App.css';
-import request from 'superagent';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './views/Home';
+import OneBook from './views/OneBook';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      books: [],
-      searchField: '',
-    }
-  }
 
-  searchBook = (e) => {
-    e.preventDefault();
-    request
-     .get("https://www.googleapis.com/books/v1/volumes")
-     .query({ q: this.state.searchField })
-     .then((data) => {
-       console.log(data);
-       this.setState({ books: [...data.body.items]})
-     })
-  }
-
-  handleSearch = (e) => {
-    this.setState({ searchField: e.target.value })
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <Header searchBook={this.searchBook} handleSearch={this.handleSearch} />
-        <BookList books={this.state.books}/>
-        <Footer />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/ReadMore/:id" exact component={OneBook} />
+      </Switch>
+    </Router>
+  </>
+);
 
 export default App;

@@ -5,7 +5,7 @@ https://book-search-app-react.herokuapp.com/
 
 # Book_search_app
 
-## Description
+## Description:telescope:
 Allow people to search their preferred book easily and efficiently
 
 ## Pivotal Tracker(Project Managment)
@@ -14,9 +14,8 @@ https://www.pivotaltracker.com/n/projects/2444618
 ## Technologies used :gear:
 - React JS
 - Webpack
-- Redux
 - SASS
-- Node JS
+
 
 
 ## Setting up the application :wrench:
@@ -25,13 +24,15 @@ https://www.pivotaltracker.com/n/projects/2444618
 1. From your computer, open terminal. 
 2. Run `git clone https://github.com/Kagorora/Book_search_app.git` to clone the repository.
 
-### Run commandss
+## To run the App in production :factory:
 
 1. Run `npm install` to install all dependencies.
 2. Run `npm start` to run the app in development environment. 
 
+## Application deployed on 🚀
+https://book-search-app-react.herokuapp.com/
 
-# Author
+## Author :man_artist:
 
 [Maxime Kagorora](https://github.com/Kagorora)
 
