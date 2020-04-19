@@ -1,9 +1,28 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
+const path = require('path');
 
 
 module.exports = {
+  devServer: {
+    stats: 'minimal',
+    historyApiFallback: {
+      disableDotRule: true,
+    },
+    port: 5000,
+    contentBase: './build',
+  },
+  entry: {
+    main: [
+      './src/index.js',
+    ],
+  },
+  output: {
+    path: path.join(__dirname, 'build'),
+    filename: 'bundle.js',
+    publicPath: '/',
+  },
   module: {
     rules: [
       {
@@ -27,6 +46,7 @@ module.exports = {
       },
     ],
   },
+
   devtool: 'inline-source-map',
   plugins: [
     new HtmlWebPackPlugin({
